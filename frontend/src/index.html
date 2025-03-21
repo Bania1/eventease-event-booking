@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EventEase - Home</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+  <!-- Custom CSS -->
+  <link href="styles/style.css" rel="stylesheet" />
+</head>
+<html>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-spacegrey py-3 fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        EVENT<span class="text-primary">EASE</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/frontend/src/pages/events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/frontend/src/pages/about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/frontend/src/pages/login.html">Login</a>
+          </li>
+          <li class="nav-item ms-2">
+            <a class="btn btn-outline-light" href="/frontend/src/pages/signup.html">
+              <i class="fas fa-user-plus me-2"></i>Sign Up
+            </a>
+          </li>
+          <!-- THEME TOGGLE -->
+          <li class="nav-item ms-2">
+            <button class="btn btn-outline-light" id="themeToggle">
+              <i class="fas fa-adjust"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section
+    class="hero vh-100 d-flex align-items-center mt-5"
+    style="
+      position: relative;
+      background: url('/frontend/public/images/hero-index.png')
+        no-repeat center center/cover;
+    "
+  >
+    <div
+      style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+      "
+    ></div>
+
+    <div class="container text-center" style="position: relative; z-index: 1">
+      <h1 class="display-4 mb-4 animate-slideup">
+        Discover Extraordinary Events
+      </h1>
+      <div class="search-bar mx-auto animate-fadein" style="max-width: 500px">
+        <input type="text" class="form-control" placeholder="Search events..." />
+      </div>
+      <div class="mt-4">
+        <a href="/frontend/src/pages/events.html" class="btn btn-primary btn-lg">
+          <i class="fas fa-ticket-alt me-2"></i>Browse Events
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Events Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-5 text-center">Featured Events</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="event-card">
+            <img
+              src="/frontend/public/images/techno_festival.png"
+              class="card-img-top"
+              alt="Event"
+            />
+            <div class="card-body bg-spacegrey">
+              <h5>Electronic Festival</h5>
+              <p class="text-muted">March 25, 2025</p>
+              <button class="btn btn-primary w-100">Get Tickets</button>
+            </div>
+          </div>
+        </div>
+        <!-- More event cards here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-spacegrey py-4 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5>EVENT<span class="text-primary">EASE</span></h5>
+          <p class="small">Your gateway to unforgettable experiences</p>
+        </div>
+        <div class="col-md-4">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="/frontend/src/pages/events.html" class="small">Upcoming Events</a></li>
+            <li><a href="/frontend/src/pages/about.html" class="small">About Us</a></li>
+            <li><a href="/frontend/src/pages/dashboard.html" class="small">My Account</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h6>Connect</h6>
+          <div class="social-links">
+            <a href="#" class="me-3"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="me-3"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <p class="small mb-0">&copy; 2025 EventEase. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  ></script>
+  <script src="/frontend/scripts/script.js"></script>
+</body>
+</html>
