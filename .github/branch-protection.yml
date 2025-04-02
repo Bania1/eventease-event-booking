@@ -1,0 +1,43 @@
+# GitHub Branch Protection Rules for Main Branch
+# File: .github/branch-protection.yml
+
+name: Protect Main Branch
+
+# Target branch to protect
+target: "main"
+
+# Enforce all configured restrictions for administrators
+enforce_admins: true
+
+# Branch protection rules
+rules:
+  # Require pull requests before merging
+  required_pull_request_reviews:
+    # Required number of approving reviewers
+    required_approving_review_count: 1
+    # Dismiss stale pull request approvals when new commits are pushed
+    dismiss_stale_reviews: true
+    # Require review from Code Owners
+    require_code_owner_reviews: false
+    # Allow specified actors to bypass required reviews
+    bypass_pull_request_allowances: []
+
+  # Require status checks to pass before merging
+  required_status_checks:
+    # Require branches to be up to date before merging
+    strict: true
+    # Status checks that are required
+    contexts:
+      - "build"  # Requires the build step to pass
+
+  # Restrict who can push to matching branches
+  restrictions:
+    # List of GitHub teams or users allowed to push
+    teams: []
+    users: []
+
+  # Do not allow deletions
+  allow_deletions: false
+  
+  # Do not allow force pushes
+  allow_force_pushes: false
